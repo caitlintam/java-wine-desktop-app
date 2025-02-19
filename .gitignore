@@ -1,0 +1,24 @@
+*.sqlite
+*.db
+*.env
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build artefacts
+build/
+
+# Gradle
+.gradle/
+
+# Submission package
+seng202_2024_team5_*

@@ -1,0 +1,19 @@
+test:
+  stage: test
+  script:
+    - ./gradlew check
+  artifacts:
+    when: always
+    paths:
+      - build/test-results/
+    reports:
+      junit: build/test-results/**/*.xml
+    expire_in: 1 week
+
+generate_artifacts:
+  stage: deploy
+  script:
+    - ./gradlew clean jar
+  artifacts:
+    paths:
+      - build/libs/grape_expectations-2.0.jar
